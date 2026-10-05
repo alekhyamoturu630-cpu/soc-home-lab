@@ -1,0 +1,54 @@
+SOC Failed Login Detection
+==========================
+
+Log Source:
+Windows Security Event Log
+
+Event ID:
+4625 - An account failed to log on
+
+Purpose:
+Detect failed authentication attempts that may indicate
+incorrect credentials, account misuse, or brute-force activity.
+
+Detection Logic:
+Monitor Windows Security Event ID 4625.
+
+Investigation Fields:
+- Account Name
+- Account Domain
+- Logon Type
+- Failure Reason
+- Status
+- Sub Status
+- Workstation Name
+- Source Network Address
+- Source Port
+- Authentication Package
+
+Controlled Lab Test:
+net use \\localhost\IPC$ /user:.\SOC_Test_User WrongPassword456
+
+Observed Result:
+A Windows Security Event ID 4625 was generated.
+
+Observed Context:
+- Account: SOC_Test_User
+- Logon Type: 3 (Network)
+- Source Address: ::1
+- Failure Reason: Unknown user name or bad password
+- Authentication Package: NTLM
+
+Severity:
+Low / Informational
+
+Reason:
+The event was intentionally generated during a controlled
+local lab test. The source address ::1 represents the IPv6
+loopback address, indicating activity from the local machine.
+
+Important SOC Note:
+A single failed-login event does not automatically indicate
+a brute-force attack. Analysts should correlate multiple
+events, timestamps, source addresses, usernames, and
+successful logins before escalating the alert.
