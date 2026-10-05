@@ -39,10 +39,6 @@ Windows Endpoint
 
 A custom detection was created to identify PowerShell process execution.
 
-A controlled test command was executed:
-
-```powershell
-powershell.exe -NoProfile -Command "Write-Output 'SOC LAB TEST'"
 ## Project Skills Demonstrated
 
 - Windows Security Monitoring
