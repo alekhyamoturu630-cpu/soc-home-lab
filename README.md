@@ -43,3 +43,19 @@ A controlled test command was executed:
 
 ```powershell
 powershell.exe -NoProfile -Command "Write-Output 'SOC LAB TEST'"
+## Project Skills Demonstrated
+
+- Windows Security Monitoring
+- Sysmon Configuration and Monitoring
+- Log Analysis
+- Detection Engineering
+- PowerShell Monitoring
+- Authentication Event Analysis
+- IOC Identification
+- Alert Triage
+- Severity Classification
+- Security Investigation Documentation
+
+## Portfolio
+
+This project was completed as part of my SOC Analyst internship practical work and demonstrates hands-on experience with endpoint monitoring, detection creation, event investigation, and security analysis in a controlled lab environment.
